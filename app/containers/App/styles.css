@@ -4,6 +4,185 @@
  * App container styles
  */
 
-.container {
-  display: block;
+ body {
+  background-clip: border-box;
+  font-family: 'Space Mono', monospace;
+  color: gray;
+ }
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 8em;
 }
+
+h1.contrast {
+  color: white;
+  margin-top: -50px;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  z-index: 0;
+}
+
+.homecontainer {
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper {
+  margin-top: -72.5px;
+  width: 100%;
+  position: relative;
+  top: 50%;
+}
+
+.backstretch {
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -999998;
+  position: absolute;
+}
+
+.backgroundpic {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  max-width: none;
+  z-index: -999999;
+  left: 0;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  animation-delay: 4s;
+  animation-name: fadeInUp;
+}
+
+.scrolldown a {
+  color: white;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid;
+  line-height: 40px;
+}
+
+.scrolldown a:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+/*
+ *  About
+ *
+ */
+
+h1.title {
+  font-size: 4em;
+}
+
+.sectionheading {
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.portfoliopic {
+  width: 50%;
+  padding: 15px;
+  border: 20px solid white;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.singleabout {
+  margin-top: 50px;
+  visibility: visible;
+  animation-delay: 1s;
+  animation-name: fadeInUp;
+}
+
+.singleabout p {
+  margin-top: 30px;
+  line-height: 25px;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.tags span {
+  background-color: pink;
+  padding: 4px 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tags span:hover {
+  color: white;
+}
+
+/*
+ *  Animations
+ *
+ */
+
+.fadeInDown {
+  visibility: visible;
+  animation-delay: 1s;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+} 
